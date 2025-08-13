@@ -4,27 +4,24 @@ myProject-lo1
 
 Простое REST API на Go для управления задачами с асинхронным логированием.
 
-## 🔧 Сборка и запуск
+## Cборка и запуск
 
 ```bash
 go build -o task-api ./cmd/server
 ./task-api
 
-## 📦 Примеры запросов (PowerShell)
-
-### 🔨 Создание задачи
-
+Создание задачи
 Invoke-RestMethod -Uri "http://localhost:8081/tasks" -Method POST -Body '{"id":"1","title":"Test","status":"pending"}' -ContentType "application/json"
 
 
 
-📄 Получение задачи по ID
+Получение задачи по ID
 Invoke-RestMethod -Uri "http://localhost:8081/tasks/1" -Method GET
 
-📋 Получение всех задач
+Получение всех задач
 Invoke-RestMethod -Uri "http://localhost:8081/tasks" -Method GET
 
-🔍 Фильтрация по статусу
+Фильтрация по статусу
 Invoke-RestMethod -Uri "http://localhost:8081/tasks?status=pending" -Method GET
 
 
